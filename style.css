@@ -1,7 +1,7 @@
- *{ 
-   margin: 0;
+*{
+  margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body{
@@ -30,9 +30,48 @@ header{
   align-items: center;
 }
 
-.titulo-site{
+.titulo_site{
   padding: 50px;
   text-align: center;
   width: 50%;
-  font: 30px
+  font: 30px;
+}
+
+.sociais{
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+  padding-right: 30px;
+}
+
+.banner1{
+  display: flex;
+  justify-content: center;
+}
+
+.estudante_titulo{
+  padding: 50px;
+  text-align: center;
+}
+
+.estudante-nome{
+  text-align: center;
+}
+
+.estudante-imagem{
+  width: 120px;
+}
+
+.estudante-icone{
+  width: 38px;
+  padding: 4px 8px;
+}
+
+.estudante{
+  background-image: background-color(#faae43);
+}
+
+.estudante.div{
+  text-align: center;
+  padding: 24px 0;
 }
