@@ -12,32 +12,34 @@
   <img class="cabecalho_imagem" src="logo_nossa_escola.png" alt="Logo da Página">
   <h1 class="titulo_site">Nossa Escola</h1>
   <div class="sociais">
-    <img class="sociais" src="whatsapp.png" alt="Logo do Whats da Escola">
-    <img class="sociais" src="facebook.png" alt="Facebook da Escola">
-    <img class="sociais" src="instagram.png" alt="Instagram da Escola">
+    <img src="whatsapp.png" alt="Logo do WhatsApp" class="icon">
+    <img src="facebook.png" alt="Facebook da Escola" class="icon">
+    <img src="instagram.png" alt="Instagram da Escola" class="icon">
   </div>
-  <button id="botao-tema">Alternar Tema</button> <!-- Botão para alternar tema -->
+  <button id="botao-tema">Alternar Tema</button>
 </header>
 
-<section class="estudante">
-  <h1 class="estudante_titulo">Alunos em destaque 2025</h1>
-  <p id="contador-visitantes">Visitantes Online: 0</p> <!-- Contador de visitantes -->
-  <div class="estudantes_todos">
-    <!-- Exemplo de um aluno, adicione o evento no JavaScript -->
-    <div class="estudante-div">
-      <img class="estudante-imagem" src="estudante_menino.png" alt="Foto dos alunos da Turma Desenvolvimento de Sistemas">
-      <h3 class="estudante-nome">Aluno 1</h3>
-    </div>
-    <!-- Repita a estrutura para os outros alunos -->
-  </div>
-</section>
+<main>
+  <section class="banner">
+    <h2>Bem-vindo ao Portal da Nossa Escola!</h2>
+    <p>Explore nossos alunos em destaque, descubra projetos e participe das atividades!</p>
+    <button onclick="irParaAlunos()" class="botao-alunos">Ver Alunos em Destaque</button>
+  </section>
+
+  <section class="info">
+    <h2>Sobre Nós</h2>
+    <p>A <strong>Nossa Escola</strong> é referência em inovação e aprendizado digital. Acreditamos no poder da tecnologia e da criatividade!</p>
+  </section>
+
+  <p id="contador-visitantes">Visitantes Online: 0</p>
+</main>
 
 <footer class="escola">
   <img class="logo_rodape" src="logo_nossa_escola.png" alt="Logo da Escola">
-  <h2 class="escola-título">Mais informações entre em contato<a class="link" href="https://wa.me/5541999999999"> 41 9.9999-9999</a></h2>
-  <p>©2025 | Curso de ADS | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados. Política de Privacidade | Proteção de dados | Encarregado de dados</p>
+  <h2 class="escola-título">Mais informações: <a class="link" href="https://wa.me/5541999999999">41 9.9999-9999</a></h2>
+  <p>©2025 | Curso de ADS | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
 </footer>
 
-<script src="script.js"></script> <!-- Link para o arquivo JavaScript -->
+<script src="script.js"></script>
 </body>
 </html>
