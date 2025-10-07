@@ -6,7 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 header {
@@ -18,14 +18,8 @@ header {
   justify-content: space-between;
 }
 
-.icon {
-  width: 40px;
-  margin: 0 8px;
-  transition: transform 0.3s;
-}
-
-.icon:hover {
-  transform: scale(1.2);
+.cabecalho_imagem {
+  width: 80px;
 }
 
 .titulo_site {
@@ -33,43 +27,55 @@ header {
   text-align: center;
 }
 
-.banner {
-  text-align: center;
-  padding: 60px;
-  background: linear-gradient(135deg, #40A2E3, #297bb3);
-  color: white;
-  animation: fadeIn 2s;
-}
-
-.botao-alunos {
-  padding: 12px 25px;
-  border: none;
-  border-radius: 12px;
-  background-color: #fff;
-  color: #297bb3;
-  font-weight: bold;
-  cursor: pointer;
+.sociais img {
+  width: 40px;
+  margin: 0 5px;
   transition: transform 0.3s;
 }
 
-.botao-alunos:hover {
+.sociais img:hover {
   transform: scale(1.1);
-  background-color: #d8ecff;
+}
+
+.banner1 {
+  background: linear-gradient(135deg, #40A2E3, #297bb3);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 1.5s ease;
+}
+
+.botao-navegar {
+  background-color: white;
+  color: #297bb3;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.botao-navegar:hover {
+  transform: scale(1.05);
+  background-color: #e0f3ff;
 }
 
 .estudantes_todos {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 30px;
 }
 
 .estudante-div {
-  background-color: #f2f2f2;
+  background: #f8f8f8;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
-  margin: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
   transition: transform 0.3s;
 }
 
@@ -78,7 +84,7 @@ header {
 }
 
 .estudante-imagem {
-  width: 150px;
+  width: 120px;
   border-radius: 50%;
 }
 
@@ -98,11 +104,12 @@ footer {
   background-color: #111;
 }
 
+/* Animações */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.fade-in {
-  animation: fadeIn 1.5s ease-in-out;
+.fade {
+  animation: fadeIn 1s ease;
 }
