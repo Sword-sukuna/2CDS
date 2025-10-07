@@ -1,115 +1,108 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {A
-    font-family: "Poppins", sans-serif;
-  }
-  
-  header {
-    background-color: #424e61;
-    color: white;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .cabecalho-itens {
-    max-width: 1980px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .cabecalho-imagem {
-    width: 6%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .titulo_site {
-    padding: 50px;
-    text-align: center;
-    width: 50%;
-    font-size: 30px;
-  }
-  
-  .sociais {
-    display: flex;
-    justify-content: flex-end;
-    width: 25%;
-    padding-right: 30px;
-  }
-  
-  .banner1 {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .estudante_titulo {
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .estudante-nome {
-    text-align: center;
-  }
-  
-  .estudante-imagem {
-    width: 120px;
-  }
-  
-  .estudante-icone {
-    width: 38px;
-    padding: 4px 8px;
-  }
-  
-  .estudante {
-    background-color: #ffffff;
-    padding: 24px 0;
-    text-align: center;
-  }
-  
-  .estudante-div {
-    text-align: center;
-    padding: 24px 0;
-  }
-  
-  .estudantes_todos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .escola {
-    background-image: linear-gradient(#40A2E3, #297bb3);
-    color: white;
-    padding: 24px 0;
-    text-align: center;
-  }
-  
-  .escola-titulo {
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .logo_rodape {
-    height: 80px;
-    padding: 12px 0;
-  }
-  
-  .link {
-    color: #ffffff;
-    text-decoration: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+header {
+  background-color: #424e61;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 40px;
+  margin: 0 8px;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.titulo_site {
+  font-size: 28px;
+  text-align: center;
+}
+
+.banner {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #40A2E3, #297bb3);
+  color: white;
+  animation: fadeIn 2s;
+}
+
+.botao-alunos {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #297bb3;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.botao-alunos:hover {
+  transform: scale(1.1);
+  background-color: #d8ecff;
+}
+
+.estudantes_todos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+.estudante-div {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  margin: 15px;
+  transition: transform 0.3s;
+}
+
+.estudante-div:hover {
+  transform: scale(1.05);
+}
+
+.estudante-imagem {
+  width: 150px;
+  border-radius: 50%;
+}
+
+footer {
+  background: linear-gradient(#40A2E3, #297bb3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
 .modo-escuro {
-  background-color: #333;
+  background-color: #222;
   color: white;
 }
 
 .modo-escuro header {
-  background-color: #222;
+  background-color: #111;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
 }
