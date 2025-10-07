@@ -28,7 +28,6 @@ function irParaAlunos() {
 function voltarHome() {
   window.location.href = "index.html";
 }
-
 // Exemplo de variável e função comentada
 // var aluno = "Raul"; // variável do tipo string
 // console.log("Aluno em destaque: " + aluno);
