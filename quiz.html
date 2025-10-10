@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz | Nossa Escola</title>
+  <title>Portal Escola | Quiz</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="cabecalho">
   <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="alunos.html">Alunos</a></li>
-      <li><a href="quiz.html" class="ativo">Quiz</a></li>
-    </ul>
+  <h1 class="titulo-site">Portal Escola</h1>
+  <button class="menu-btn" id="menu-btn">☰</button>
+  <nav class="menu" id="menu">
+    <a href="index.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="quiz.html" class="ativo">Quiz</a>
   </nav>
 </header>
 
-<section class="quiz">
+<section class="quiz fade-in">
   <h2>Quiz JavaScript</h2>
   <p id="pergunta"></p>
   <div id="respostas"></div>
@@ -27,7 +27,7 @@
 </section>
 
 <footer class="rodape">
-  <p>©2025 | Nossa Escola | Todos os Direitos Reservados</p>
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
 </footer>
 
 <script src="script.js"></script>
