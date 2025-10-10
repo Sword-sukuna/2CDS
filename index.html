@@ -1,73 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home | Nossa Escola</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossa Escola | Início</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="page" data-page="index">
+<body>
 
-  <div class="page-wrap"><!-- Mantém footer no fim -->
-    <header class="cabecalho-itens">
-      <div class="cab-left">
-        <img class="cabecalho_imagem" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a2e0f8b8eab2b8384f0c69b9f4c9d98" alt="Logo da Página">
-        <h1 class="titulo_site">Nossa Escola</h1>
-      </div>
+<header class="cabecalho">
+  <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html" class="ativo">Início</a></li>
+      <li><a href="alunos.html">Alunos</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="https://wa.me/5541999999999" target="_blank">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="sociais">
+    <a href="#" target="_blank"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
+    <a href="#" target="_blank"><img src="imagens/facebook.png" alt="Facebook"></a>
+    <a href="#" target="_blank"><img src="imagens/instagram.png" alt="Instagram"></a>
+  </div>
+</header>
 
-      <div class="cab-right">
-        <div class="sociais">
-          <img class="icon" src="https://images.unsplash.com/photo-1523475496153-3d6ccf2b9b08?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&s=7fdf2d9b9e4b3a6f7b5d3e1b6b5f1c2d" alt="Whats">
-          <img class="icon" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&s=5d4a25d2f8d4b6a2b9c7d4f3b2a1c0d3" alt="Face">
-          <img class="icon" src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?q=80&w=100&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c1b5a1f2e3d4c6b7a8f9e0d1c2b3a4f" alt="Insta">
-        </div>
+<section class="banner">
+  <img src="imagens/paragrafo_1_banner.jpg" alt="Banner da Escola">
+</section>
 
-        <button id="botao-tema" class="btn small">Alternar Tema</button>
-      </div>
-    </header>
+<section class="conteudo">
+  <h1>Bem-vindo à Nossa Escola</h1>
+  <p>Transformando o futuro através da educação e da tecnologia!</p>
+  <p><a class="botao" href="alunos.html">Ver Alunos</a></p>
+</section>
 
-    <section class="banner1">
-      <div class="banner-texto">
-        <h2>Bem-vindo ao Portal da Nossa Escola</h2>
-        <p>Explore nossos alunos em destaque, faça o quiz pedagógico e veja as novidades.</p>
-        <div class="banner-buttons">
-          <button id="btn-alunos" class="btn">Ver Alunos</button>
-          <button id="btn-quiz" class="btn outline">Fazer Quiz</button>
-        </div>
-      </div>
-    </section>
+<footer class="rodape">
+  <p>©2025 | Nossa Escola | Todos os Direitos Reservados</p>
+</footer>
 
-    <section class="estudante home-estudante">
-      <h1 class="estudante_titulo">Destaques 2025</h1>
-      <p id="contador-visitantes">Visitantes Online: 0</p>
-      <div class="estudantes_todos preview">
-        <!-- mini-preview dos alunos (clicável para ir a alunos.html) -->
-        <div class="estudante-div">
-          <img class="estudante-imagem" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=8ef7f9b2f6d8a1c2f3b4e5d6c7a8b9c0" alt="Aluno 1">
-          <h3 class="estudante-nome">Aluno 1</h3>
-        </div>
-
-        <div class="estudante-div">
-          <img class="estudante-imagem" src="https://images.unsplash.com/photo-1531403009284-440f080d1e3f?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=5fbb3e1f6d2c7b8a9e0d1c2b3a4f5e6d" alt="Aluno 2">
-          <h3 class="estudante-nome">Aluno 2</h3>
-        </div>
-
-        <div class="estudante-div">
-          <img class="estudante-imagem" src="https://images.unsplash.com/photo-1546902866-6e0e9e4f369f?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=7b6d5a4c3f2e1a9b8c7d6e5f4a3b2c1d" alt="Aluno 3">
-          <h3 class="estudante-nome">Aluno 3</h3>
-        </div>
-      </div>
-    </section>
-
-    <footer class="escola">
-      <img class="logo_rodape" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a2e0f8b8eab2b8384f0c69b9f4c9d98" alt="Logo">
-      <h2 class="escola-titulo">Mais informações: <a class="link" href="https://wa.me/5541999999999">41 9.9999-9999</a></h2>
-      <p>©2025 | Curso de ADS | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
-    </footer>
-  </div><!-- /.page-wrap -->
-
-  <div id="transition-overlay" class="transition-overlay hidden"></div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
