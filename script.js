@@ -1,40 +1,55 @@
-// MENU RESPONSIVO
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
-
-if (menuBtn && menu) {
-  menuBtn.addEventListener("click", () => {
-    menu.classList.toggle("ativo");
-  });
-}
-
-// ANIMAÇÕES DE ENTRADA
-window.addEventListener("scroll", () => {
-  const elementos = document.querySelectorAll(".fade-in");
-  elementos.forEach((el) => {
-    const posicao = el.getBoundingClientRect().top;
-    const alturaTela = window.innerHeight;
-    if (posicao < alturaTela - 100) el.classList.add("visivel");
+/* Menu responsivo: suporta múltiplas páginas/headers */
+document.querySelectorAll('.menu-btn').forEach(btn => {
+  // local menu correspondente: nextElementSibling could vary, so find nearest .menu in header
+  const header = btn.closest('.cabecalho');
+  const menu = header ? header.querySelector('.menu') : null;
+  if (!menu) return;
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+    // highlight animation: briefly add a class for effect
+    menu.classList.add('menu-open-glow');
+    setTimeout(()=> menu.classList.remove('menu-open-glow'), 380);
   });
 });
 
-// QUIZ
-const perguntas = document.querySelectorAll(".pergunta");
-const btnResultado = document.getElementById("ver-resultado");
+/* animação fade-in on load + on scroll */
+function revealOnScroll() {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) el.classList.add('visivel');
+  });
+}
 
-if (btnResultado) {
-  btnResultado.addEventListener("click", () => {
-    let acertos = 0;
-    perguntas.forEach((p) => {
-      const correta = p.dataset.correta;
-      const selecionada = p.querySelector("input:checked");
-      if (selecionada && selecionada.value === correta) acertos++;
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+  revealOnScroll();
+});
+window.addEventListener('scroll', revealOnScroll);
+
+/* QUIZ: resultado e reiniciar (se houver) */
+(function initQuiz() {
+  const btnResultado = document.getElementById('ver-resultado');
+  const btnReiniciar = document.getElementById('reiniciar-quiz');
+
+  if (btnResultado) {
+    btnResultado.addEventListener('click', () => {
+      const perguntas = document.querySelectorAll('.pergunta');
+      let acertos = 0;
+      perguntas.forEach(p => {
+        const correta = p.dataset.correta;
+        const selecionada = p.querySelector('input:checked');
+        if (selecionada && selecionada.value === correta) acertos++;
+      });
+      alert(`Você acertou ${acertos} de ${perguntas.length} perguntas.`);
     });
-    alert(`Você acertou ${acertos} de ${perguntas.length} perguntas!`);
-  });
-}
+  }
 
-// EFEITO SUAVE AO CARREGAR
-window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
+  if (btnReiniciar) {
+    btnReiniciar.addEventListener('click', () => {
+      document.querySelectorAll('.pergunta input[type="radio"]').forEach(i => i.checked = false);
+      // scroll to top of quiz
+      const quiz = document.querySelector('.quiz');
+      if (quiz) quiz.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  }
+})();

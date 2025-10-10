@@ -1,210 +1,69 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* reset */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body{background:#f4f6fb;color:#222;min-height:100vh;display:flex;flex-direction:column;opacity:0;transition:opacity .9s ease}
+
+/* header */
+.cabecalho{background:#1f4e8c;color:#fff;padding:12px 20px;position:relative;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.logo-nome{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;object-fit:contain;border-radius:6px}
+.titulo-site{font-size:1.25rem}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+.menu{display:flex;gap:18px;align-items:center}
+.menu a{color:#fff;text-decoration:none;font-weight:600;padding:6px 8px;border-radius:6px;transition:all .22s ease}
+.menu a:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.menu a.ativo{background:rgba(255,255,255,.08);color:#ffdd57}
+
+/* redes */
+.redes-sociais img{width:30px;margin-left:8px;transition:transform .2s ease}
+.redes-sociais img:hover{transform:scale(1.12)}
+
+/* banner */
+.banner{position:relative;overflow:hidden}
+.banner img{width:100%;height:370px;object-fit:cover;display:block;filter:contrast(98%)}
+.banner-text{position:absolute;left:20px;top:40%;transform:translateY(-50%);color:#fff;max-width:720px}
+.banner-text h2{font-size:2rem;margin-bottom:8px;text-shadow:0 4px 12px rgba(0,0,0,.35)}
+.banner-text p{margin-bottom:12px;text-shadow:0 3px 8px rgba(0,0,0,.3)}
+.banner-text .botao{background:#ffcc00;color:#103159;padding:10px 18px;border-radius:8px;font-weight:700}
+
+/* conteudo */
+.conteudo{padding:36px 18px;flex:1}
+.sobre{max-width:900px;margin:0 auto 20px;text-align:center}
+
+/* alunos grid */
+.alunos-lista{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;padding:30px}
+.aluno-card{background:#fff;border-radius:12px;padding:18px;text-align:center;box-shadow:0 6px 18px rgba(14,30,60,.06);transition:transform .28s ease,box-shadow .28s ease}
+.aluno-card:hover{transform:translateY(-8px);box-shadow:0 12px 30px rgba(14,30,60,.12)}
+.aluno-foto{width:120px;height:120px;border-radius:50%;object-fit:cover;margin-bottom:12px}
+.aluno-card h3{color:#103159;margin-bottom:8px}
+
+/* quiz */
+.quiz{max-width:760px;margin:20px auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 26px rgba(14,30,60,.06)}
+.pergunta{margin-bottom:18px}
+.pergunta h3{color:#103159;margin-bottom:8px}
+.pergunta label{display:block;margin:6px 0}
+
+/* botões */
+.botao{display:inline-block;padding:10px 18px;border-radius:8px;background:#1f4e8c;color:#fff;border:none;cursor:pointer;font-weight:700;transition:transform .18s ease,box-shadow .18s}
+.botao:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(31,78,140,.18)}
+.botao.outline{background:transparent;color:#1f4e8c;border:2px solid #1f4e8c}
+
+/* footer */
+.rodape{background:#1f4e8c;color:#fff;text-align:center;padding:14px;margin-top:28px}
+
+/* fade-in / animations */
+.fade-in{opacity:0;transform:translateY(24px);transition:all .7s ease}
+.fade-in.visivel{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* responsive */
+@media(max-width:900px){
+  .banner img{height:300px}
+  .banner-text{left:16px;right:16px;top:48%}
 }
-
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f4f4f4;
-  color: #222;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-body.loaded {
-  opacity: 1;
-}
-
-/* ===== CABEÇALHO ===== */
-header.cabecalho {
-  background-color: #1f4e8c;
-  color: white;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.logo-nome {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo {
-  width: 60px;
-}
-
-.menu {
-  display: flex;
-  gap: 20px;
-}
-
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.menu a:hover {
-  color: #ffcc00;
-}
-
-.menu-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
-
-.redes-sociais img {
-  width: 30px;
-  margin-left: 10px;
-  transition: transform 0.3s ease;
-}
-
-.redes-sociais img:hover {
-  transform: scale(1.2);
-}
-
-/* ===== CONTEÚDO ===== */
-.banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.conteudo {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.botao {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #1f4e8c;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.botao:hover {
-  background-color: #163a68;
-}
-
-/* ===== ALUNOS ===== */
-.alunos-lista {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 40px;
-  justify-items: center;
-}
-
-.aluno {
-  background-color: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  max-width: 280px;
-}
-
-.aluno:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
-}
-
-.aluno-foto {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.aluno h3 {
-  color: #1f4e8c;
-  margin-bottom: 10px;
-}
-
-/* ===== QUIZ ===== */
-.quiz {
-  max-width: 600px;
-  margin: 40px auto;
-  background-color: white;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.pergunta {
-  margin-bottom: 25px;
-}
-
-.pergunta h3 {
-  color: #1f4e8c;
-}
-
-.pergunta label {
-  display: block;
-  margin: 5px 0;
-}
-
-/* ===== RODAPÉ ===== */
-.rodape {
-  background-color: #1f4e8c;
-  color: white;
-  text-align: center;
-  padding: 15px 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-/* ===== ANIMAÇÕES ===== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.visivel {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #1f4e8c;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  .menu.ativo {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
-
-  .redes-sociais {
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-  }
+@media(max-width:768px){
+  .menu{display:none;position:absolute;top:68px;left:0;width:100%;flex-direction:column;background:#1f4e8c;padding:12px 0}
+  .menu.ativo{display:flex;animation:fadeIn .28s ease}
+  .menu-btn{display:block}
+  .banner img{height:230px}
+  .banner-text{top:45%;padding-right:16px}
 }

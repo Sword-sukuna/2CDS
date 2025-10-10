@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="cabecalho">
     <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo da Escola" class="logo">
-      <h1>Portal Escola</h1>
+      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+      <h1 class="titulo-site">Portal Escola</h1>
     </div>
 
-    <button id="menu-btn" class="menu-btn">☰</button>
-    
-    <nav id="menu" class="menu">
-      <a href="index.html">Início</a>
-      <a href="alunos.html">Alunos</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="#contato">Contato</a>
+    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+
+    <nav class="menu" role="navigation">
+      <a href="index.html" class="menu-link ativo">Início</a>
+      <a href="alunos.html" class="menu-link">Alunos</a>
+      <a href="quiz.html" class="menu-link">Quiz</a>
+      <!-- Contato abre WhatsApp (temporário) -->
+      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
     </nav>
 
     <div class="redes-sociais">
-      <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
     </div>
   </header>
 
   <section class="banner fade-in">
-    <img src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+    <img src="paragrafo_1_banner.jpg" alt="Banner Portal Escola">
+    <div class="banner-text">
+      <h2>Bem-vindo ao Portal Escola</h2>
+      <p>Educação, tecnologia e projetos dos nossos alunos.</p>
+      <a href="alunos.html" class="botao">Ver Alunos</a>
+    </div>
   </section>
 
-  <main class="conteudo fade-in">
-    <h2>Bem-vindo ao Portal Escola</h2>
-    <p>Promovendo o aprendizado e a inovação na educação!</p>
-    <a href="alunos.html" class="botao">Ver Alunos em Destaque</a>
+  <main class="conteudo">
+    <section class="sobre fade-in">
+      <h2>O que fazemos</h2>
+      <p>Projetos, cursos e atividades práticas para preparar profissionais de tecnologia.</p>
+    </section>
   </main>
 
-  <footer id="contato" class="rodape">
+  <footer class="rodape">
     <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
   </footer>
 

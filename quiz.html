@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Quiz | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="cabecalho">
     <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo da Escola" class="logo">
-      <h1>Portal Escola</h1>
+      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+      <h1 class="titulo-site">Portal Escola</h1>
     </div>
 
-    <button id="menu-btn" class="menu-btn">☰</button>
+    <button class="menu-btn" aria-label="Abrir menu">☰</button>
 
-    <nav id="menu" class="menu">
-      <a href="index.html">Início</a>
-      <a href="alunos.html">Alunos</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="#contato">Contato</a>
+    <nav class="menu" role="navigation">
+      <a href="index.html" class="menu-link">Início</a>
+      <a href="alunos.html" class="menu-link">Alunos</a>
+      <a href="quiz.html" class="menu-link ativo">Quiz</a>
+      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
     </nav>
 
     <div class="redes-sociais">
-      <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
     </div>
   </header>
 
-  <section class="conteudo fade-in">
-    <h2>Quiz de JavaScript</h2>
-    <p>Teste seus conhecimentos!</p>
-  </section>
+  <main class="conteudo">
+    <section class="intro fade-in">
+      <h2>Quiz de JavaScript</h2>
+      <p>Teste seus conhecimentos rápidos.</p>
+    </section>
 
-  <section class="quiz">
-    <div class="pergunta" data-correta="b">
-      <h3>1. Qual comando exibe algo no console?</h3>
-      <label><input type="radio" name="p1" value="a"> print()</label>
-      <label><input type="radio" name="p1" value="b"> console.log()</label>
-      <label><input type="radio" name="p1" value="c"> echo()</label>
-    </div>
+    <section class="quiz fade-in">
+      <div class="pergunta" data-correta="b">
+        <h3>1) Qual comando mostra saída no console?</h3>
+        <label><input type="radio" name="p1" value="a"> print()</label>
+        <label><input type="radio" name="p1" value="b"> console.log()</label>
+        <label><input type="radio" name="p1" value="c"> echo()</label>
+      </div>
 
-    <div class="pergunta" data-correta="a">
-      <h3>2. Qual palavra-chave cria uma variável?</h3>
-      <label><input type="radio" name="p2" value="a"> let</label>
-      <label><input type="radio" name="p2" value="b"> make</label>
-      <label><input type="radio" name="p2" value="c"> create</label>
-    </div>
+      <div class="pergunta" data-correta="a">
+        <h3>2) Como declarar uma variável moderna?</h3>
+        <label><input type="radio" name="p2" value="a"> let</label>
+        <label><input type="radio" name="p2" value="b"> var</label>
+        <label><input type="radio" name="p2" value="c"> const</label>
+      </div>
 
-    <div class="pergunta" data-correta="c">
-      <h3>3. Qual tipo de dado é usado para texto?</h3>
-      <label><input type="radio" name="p3" value="a"> Number</label>
-      <label><input type="radio" name="p3" value="b"> Boolean</label>
-      <label><input type="radio" name="p3" value="c"> String</label>
-    </div>
+      <div class="pergunta" data-correta="c">
+        <h3>3) Tipo de dado para texto?</h3>
+        <label><input type="radio" name="p3" value="a"> Number</label>
+        <label><input type="radio" name="p3" value="b"> Boolean</label>
+        <label><input type="radio" name="p3" value="c"> String</label>
+      </div>
 
-    <button id="ver-resultado" class="botao">Ver Resultado</button>
-  </section>
+      <div class="quiz-actions">
+        <button id="ver-resultado" class="botao">Ver Resultado</button>
+        <button id="reiniciar-quiz" class="botao outline">Reiniciar</button>
+      </div>
+    </section>
+  </main>
 
-  <footer id="contato" class="rodape">
+  <footer class="rodape">
     <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
   </footer>
 

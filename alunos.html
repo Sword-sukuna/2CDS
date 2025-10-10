@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alunos em Destaque | Portal Escola</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alunos | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header class="cabecalho">
     <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo da Escola" class="logo">
-      <h1>Portal Escola</h1>
+      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+      <h1 class="titulo-site">Portal Escola</h1>
     </div>
 
-    <button id="menu-btn" class="menu-btn">☰</button>
+    <button class="menu-btn" aria-label="Abrir menu">☰</button>
 
-    <nav id="menu" class="menu">
-      <a href="index.html">Início</a>
-      <a href="alunos.html">Alunos</a>
-      <a href="quiz.html">Quiz</a>
-      <a href="#contato">Contato</a>
+    <nav class="menu" role="navigation">
+      <a href="index.html" class="menu-link">Início</a>
+      <a href="alunos.html" class="menu-link ativo">Alunos</a>
+      <a href="quiz.html" class="menu-link">Quiz</a>
+      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
     </nav>
 
     <div class="redes-sociais">
-      <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="#"><img src="facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
     </div>
   </header>
 
-  <section class="conteudo fade-in">
-    <h2>Alunos em Destaque 2025</h2>
-    <p>Conheça os alunos que se destacaram por seus projetos, dedicação e desempenho.</p>
-  </section>
+  <main class="conteudo">
+    <section class="intro fade-in">
+      <h2>Alunos em Destaque 2025</h2>
+      <p>Conheça alguns alunos que se destacaram em projetos e aprendizado.</p>
+    </section>
 
-  <section class="alunos-lista">
-    <div class="aluno fade-in">
-      <img src="estudante_menina.png" alt="Maria Silva" class="aluno-foto">
-      <h3>Maria Silva</h3>
-      <p>Aluna dedicada em Desenvolvimento de Sistemas, apaixonada por tecnologia e inovação.</p>
-    </div>
+    <section class="alunos-lista">
+      <article class="aluno-card fade-in">
+        <img src="estudante_menina.png" alt="Maria Silva" class="aluno-foto">
+        <h3>Maria Silva</h3>
+        <p>Aluna em Desenvolvimento de Sistemas. Projeto: app de organização de estudos.</p>
+      </article>
 
-    <div class="aluno fade-in">
-      <img src="estudante_menino.png" alt="João Pereira" class="aluno-foto">
-      <h3>João Pereira</h3>
-      <p>Responsável pelo projeto de automação escolar. Destaque em lógica e programação.</p>
-    </div>
+      <article class="aluno-card fade-in">
+        <img src="estudante_menino.png" alt="João Pereira" class="aluno-foto">
+        <h3>João Pereira</h3>
+        <p>Destaque em automação e lógica. Projeto: robô seguidor de linha.</p>
+      </article>
 
-    <div class="aluno fade-in">
-      <img src="estudante_menino.png" alt="Carlos Almeida" class="aluno-foto">
-      <h3>Carlos Almeida</h3>
-      <p>Focado em design de interfaces e experiência do usuário. Criador do portal de estudos.</p>
-    </div>
+      <article class="aluno-card fade-in">
+        <img src="estudante_menino.png" alt="Carlos Almeida" class="aluno-foto">
+        <h3>Carlos Almeida</h3>
+        <p>Designer de interfaces — focado em acessibilidade e UX.</p>
+      </article>
 
-    <div class="aluno fade-in">
-      <img src="estudante_menina.png" alt="Ana Souza" class="aluno-foto">
-      <h3>Ana Souza</h3>
-      <p>Destacou-se em banco de dados e criação de dashboards educativos interativos.</p>
-    </div>
-  </section>
+      <article class="aluno-card fade-in">
+        <img src="estudante_menina.png" alt="Ana Souza" class="aluno-foto">
+        <h3>Ana Souza</h3>
+        <p>Especialista em dados e visualização. Projeto: dashboards interativos.</p>
+      </article>
+    </section>
+  </main>
 
-  <footer id="contato" class="rodape">
+  <footer class="rodape">
     <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
   </footer>
 
