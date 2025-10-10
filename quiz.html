@@ -3,33 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Escola | Quiz</title>
+  <title>Quiz | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="cabecalho">
+    <div class="logo-nome">
+      <img src="logo_nossa_escola.png" alt="Logo da Escola" class="logo">
+      <h1>Portal Escola</h1>
+    </div>
 
-<header class="cabecalho">
-  <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
-  <h1 class="titulo-site">Portal Escola</h1>
-  <button class="menu-btn" id="menu-btn">☰</button>
-  <nav class="menu" id="menu">
-    <a href="index.html">Início</a>
-    <a href="alunos.html">Alunos</a>
-    <a href="quiz.html" class="ativo">Quiz</a>
-  </nav>
-</header>
+    <button id="menu-btn" class="menu-btn">☰</button>
 
-<section class="quiz fade-in">
-  <h2>Quiz JavaScript</h2>
-  <p id="pergunta"></p>
-  <div id="respostas"></div>
-  <p id="resultado"></p>
-</section>
+    <nav id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="#contato">Contato</a>
+    </nav>
 
-<footer class="rodape">
-  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
-</footer>
+    <div class="redes-sociais">
+      <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </header>
 
-<script src="script.js"></script>
+  <section class="conteudo fade-in">
+    <h2>Quiz de JavaScript</h2>
+    <p>Teste seus conhecimentos!</p>
+  </section>
+
+  <section class="quiz">
+    <div class="pergunta" data-correta="b">
+      <h3>1. Qual comando exibe algo no console?</h3>
+      <label><input type="radio" name="p1" value="a"> print()</label>
+      <label><input type="radio" name="p1" value="b"> console.log()</label>
+      <label><input type="radio" name="p1" value="c"> echo()</label>
+    </div>
+
+    <div class="pergunta" data-correta="a">
+      <h3>2. Qual palavra-chave cria uma variável?</h3>
+      <label><input type="radio" name="p2" value="a"> let</label>
+      <label><input type="radio" name="p2" value="b"> make</label>
+      <label><input type="radio" name="p2" value="c"> create</label>
+    </div>
+
+    <div class="pergunta" data-correta="c">
+      <h3>3. Qual tipo de dado é usado para texto?</h3>
+      <label><input type="radio" name="p3" value="a"> Number</label>
+      <label><input type="radio" name="p3" value="b"> Boolean</label>
+      <label><input type="radio" name="p3" value="c"> String</label>
+    </div>
+
+    <button id="ver-resultado" class="botao">Ver Resultado</button>
+  </section>
+
+  <footer id="contato" class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

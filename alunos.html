@@ -3,53 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Escola | Alunos</title>
+  <title>Alunos em Destaque | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header class="cabecalho">
+    <div class="logo-nome">
+      <img src="logo_nossa_escola.png" alt="Logo da Escola" class="logo">
+      <h1>Portal Escola</h1>
+    </div>
 
-<header class="cabecalho">
-  <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
-  <h1 class="titulo-site">Portal Escola</h1>
-  <button class="menu-btn" id="menu-btn">☰</button>
-  <nav class="menu" id="menu">
-    <a href="index.html">Início</a>
-    <a href="alunos.html" class="ativo">Alunos</a>
-    <a href="quiz.html">Quiz</a>
-    <a href="https://wa.me/5541999999999" target="_blank">Contato</a>
-  </nav>
-</header>
+    <button id="menu-btn" class="menu-btn">☰</button>
 
-<section class="alunos fade-in">
-  <h2>Alunos em Destaque 2025</h2>
-  <div class="galeria">
-    <div class="aluno">
-      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva">
+    <nav id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="alunos.html">Alunos</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="redes-sociais">
+      <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="#"><img src="facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="instagram.png" alt="Instagram"></a>
+    </div>
+  </header>
+
+  <section class="conteudo fade-in">
+    <h2>Alunos em Destaque 2025</h2>
+    <p>Conheça os alunos que se destacaram por seus projetos, dedicação e desempenho.</p>
+  </section>
+
+  <section class="alunos-lista">
+    <div class="aluno fade-in">
+      <img src="estudante_menina.png" alt="Maria Silva" class="aluno-foto">
       <h3>Maria Silva</h3>
-      <p>Estudante dedicada de Desenvolvimento Web, apaixonada por tecnologia e inovação.</p>
+      <p>Aluna dedicada em Desenvolvimento de Sistemas, apaixonada por tecnologia e inovação.</p>
     </div>
-    <div class="aluno">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Oliveira">
-      <h3>João Oliveira</h3>
-      <p>Foco em programação backend e segurança da informação. Gosta de desafios técnicos.</p>
+
+    <div class="aluno fade-in">
+      <img src="estudante_menino.png" alt="João Pereira" class="aluno-foto">
+      <h3>João Pereira</h3>
+      <p>Responsável pelo projeto de automação escolar. Destaque em lógica e programação.</p>
     </div>
-    <div class="aluno">
-      <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Ana Souza">
+
+    <div class="aluno fade-in">
+      <img src="estudante_menino.png" alt="Carlos Almeida" class="aluno-foto">
+      <h3>Carlos Almeida</h3>
+      <p>Focado em design de interfaces e experiência do usuário. Criador do portal de estudos.</p>
+    </div>
+
+    <div class="aluno fade-in">
+      <img src="estudante_menina.png" alt="Ana Souza" class="aluno-foto">
       <h3>Ana Souza</h3>
-      <p>Especialista em design UX/UI, trabalha com criação de interfaces acessíveis e modernas.</p>
+      <p>Destacou-se em banco de dados e criação de dashboards educativos interativos.</p>
     </div>
-    <div class="aluno">
-      <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Carlos Lima">
-      <h3>Carlos Lima</h3>
-      <p>Entusiasta de IA e aprendizado de máquina, sempre em busca de novas soluções criativas.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer class="rodape">
-  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
-</footer>
+  <footer id="contato" class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
