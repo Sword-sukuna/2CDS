@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nossa Escola | Início</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Escola | Início</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="cabecalho">
   <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html" class="ativo">Início</a></li>
-      <li><a href="alunos.html">Alunos</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="https://wa.me/5541999999999" target="_blank">Contato</a></li>
-    </ul>
+
+  <h1 class="titulo-site">Portal Escola</h1>
+
+  <button class="menu-btn" id="menu-btn">☰</button>
+
+  <nav class="menu" id="menu">
+    <a href="index.html" class="ativo">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="https://wa.me/5541999999999" target="_blank">Contato</a>
   </nav>
+
   <div class="sociais">
-    <a href="#" target="_blank"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
-    <a href="#" target="_blank"><img src="imagens/facebook.png" alt="Facebook"></a>
-    <a href="#" target="_blank"><img src="imagens/instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
+    <a href="#"><img src="imagens/facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
   </div>
 </header>
 
-<section class="banner">
+<section class="banner fade-in">
   <img src="imagens/paragrafo_1_banner.jpg" alt="Banner da Escola">
 </section>
 
-<section class="conteudo">
-  <h1>Bem-vindo à Nossa Escola</h1>
-  <p>Transformando o futuro através da educação e da tecnologia!</p>
-  <p><a class="botao" href="alunos.html">Ver Alunos</a></p>
+<section class="conteudo fade-in">
+  <h2>Bem-vindo ao Portal Escola</h2>
+  <p>Promovendo o aprendizado e a inovação na educação!</p>
+  <a href="alunos.html" class="botao">Ver Alunos em Destaque</a>
 </section>
 
 <footer class="rodape">
-  <p>©2025 | Nossa Escola | Todos os Direitos Reservados</p>
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
 </footer>
 
 <script src="script.js"></script>
