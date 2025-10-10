@@ -1,115 +1,127 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset simples */
+* { margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --blue-1:#40A2E3;
+  --blue-2:#297bb3;
+  --bg:#ffffff;
+  --text:#222;
+  --card:#f8f8f8;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  transition: background-color 0.4s, color 0.4s;
+/* Layout que mantém footer embaixo */
+body.page {
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--bg);
+  color:var(--text);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  transition: background .35s, color .35s;
+}
+.page-wrap {
+  display:flex;
+  flex-direction:column;
+  flex:1 0 auto; /* permite footer ir ao final */
 }
 
-header {
-  background-color: #424e61;
-  color: white;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Header */
+header.cabecalho-itens {
+  background-color: var(--blue-2);
+  color:white;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
 }
+.cab-left { display:flex; align-items:center; gap:12px; }
+.cabecalho_imagem { width:64px; height:64px; object-fit:cover; border-radius:8px; }
+.titulo_site { font-size:20px; }
 
-.cabecalho_imagem {
-  width: 80px;
-}
+/* Social icons / right */
+.cab-right { display:flex; align-items:center; gap:10px; }
+.icon { width:36px; height:36px; object-fit:cover; border-radius:6px; opacity:.95; }
+.icon:hover { transform:scale(1.06); }
 
-.titulo_site {
-  font-size: 28px;
-  text-align: center;
-}
-
-.sociais img {
-  width: 40px;
-  margin: 0 5px;
-  transition: transform 0.3s;
-}
-
-.sociais img:hover {
-  transform: scale(1.1);
-}
-
+/* Banner principal */
 .banner1 {
-  background: linear-gradient(135deg, #40A2E3, #297bb3);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-  animation: fadeIn 1.5s ease;
+  background: linear-gradient(135deg,var(--blue-1),var(--blue-2));
+  color:white;
+  padding:40px 18px;
+  text-align:center;
+}
+.banner-texto h2 { font-size:28px; margin-bottom:8px; }
+.banner-texto p { opacity:0.95; margin-bottom:14px; }
+.banner-buttons { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+
+/* Botões */
+.btn {
+  background:var(--blue-2);
+  color:white;
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  box-shadow: 0 6px 14px rgba(41,123,179,0.18);
+  transition: transform .18s ease, box-shadow .18s;
+}
+.btn:hover { transform:translateY(-3px); }
+.btn.small { padding:6px 10px; font-size:14px; border-radius:8px; }
+.btn.outline, .outline {
+  background:transparent;
+  color:var(--blue-2);
+  border:2px solid var(--blue-2);
+  box-shadow:none;
 }
 
-.botao-navegar {
-  background-color: white;
-  color: #297bb3;
-  padding: 12px 20px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.3s;
+/* Estudantes */
+.estudante { padding:26px 18px; text-align:center; }
+.estudantes_todos { display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:14px; }
+.estudante-div { width:220px; background:var(--card); padding:16px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); text-align:center; transition: transform .25s ease, box-shadow .25s; }
+.estudante-div:hover { transform: translateY(-8px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+.estudante-imagem { width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:10px; }
+
+/* Footer fixado ao final */
+footer.escola {
+  background: linear-gradient(var(--blue-1),var(--blue-2));
+  color:white;
+  padding:18px;
+  text-align:center;
+  margin-top:24px;
+  flex-shrink:0;
 }
 
-.botao-navegar:hover {
-  transform: scale(1.05);
-  background-color: #e0f3ff;
+/* Quiz */
+.quiz-section { padding:28px 18px; display:flex; justify-content:center; }
+.quiz-box { width:100%; max-width:760px; background:var(--card); padding:20px; border-radius:12px; box-shadow: 0 8px 26px rgba(0,0,0,0.08); }
+.question { font-weight:700; margin-bottom:12px; }
+.answers { display:flex; flex-direction:column; gap:10px; margin-bottom:8px; }
+.answer-btn { padding:10px 12px; border-radius:10px; border:1px solid rgba(0,0,0,0.08); background:white; cursor:pointer; text-align:left; }
+.answer-btn:hover { transform:translateY(-3px); }
+
+/* Animações de cards */
+.anim-card { animation: cardIn .6s ease both; }
+@keyframes cardIn {
+  from { opacity:0; transform: translateY(20px) scale(.98); }
+  to { opacity:1; transform: translateY(0) scale(1); }
 }
 
-.estudantes_todos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 30px;
+/* Page transition overlay */
+.transition-overlay {
+  position:fixed; inset:0; z-index:9999;
+  background:linear-gradient(90deg, rgba(255,255,255,0.0), rgba(41,123,179,0.9));
+  pointer-events:none;
+  opacity:0; transition: opacity .45s ease;
 }
+.transition-overlay.show { opacity:1; pointer-events:auto; }
 
-.estudante-div {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 200px;
-  transition: transform 0.3s;
-}
+/* Dark mode (modo-escuro) */
+body.modo-escuro { --bg:#0f1720; --text:#e6eef8; --card:#17202a; }
+body.modo-escuro header.cabecalho-itens { background:#0b1320; }
 
-.estudante-div:hover {
-  transform: scale(1.05);
-}
-
-.estudante-imagem {
-  width: 120px;
-  border-radius: 50%;
-}
-
-footer {
-  background: linear-gradient(#40A2E3, #297bb3);
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-.modo-escuro {
-  background-color: #222;
-  color: white;
-}
-
-.modo-escuro header {
-  background-color: #111;
-}
-
-/* Animações */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.fade {
-  animation: fadeIn 1s ease;
+/* Responsividade simples */
+@media (max-width:720px){
+  .estudante-div{ width:160px; padding:12px; }
+  .titulo_site{ font-size:18px; }
+  .cabecalho_imagem{ width:48px; height:48px; }
 }
