@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz | Nossa Escola</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="page" data-page="quiz">
+<body>
 
-  <div class="page-wrap">
-    <header class="cabecalho-itens">
-      <div class="cab-left">
-        <img class="cabecalho_imagem" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=9a2e0f8b8eab2b8384f0c69b9f4c9d98" alt="Logo">
-        <h1 class="titulo_site">Quiz Rápido</h1>
-      </div>
+<header class="cabecalho">
+  <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="alunos.html">Alunos</a></li>
+      <li><a href="quiz.html" class="ativo">Quiz</a></li>
+    </ul>
+  </nav>
+</header>
 
-      <div class="cab-right">
-        <button id="btn-home-quiz" class="btn small outline">Voltar</button>
-        <button id="botao-tema-3" class="btn small">Alternar Tema</button>
-      </div>
-    </header>
+<section class="quiz">
+  <h2>Quiz JavaScript</h2>
+  <p id="pergunta"></p>
+  <div id="respostas"></div>
+  <p id="resultado"></p>
+</section>
 
-    <section class="quiz-section">
-      <h2>Quiz: Noções de JavaScript</h2>
-      <div id="quiz-box" class="quiz-box">
-        <div id="question" class="question">Pergunta</div>
-        <div id="answers" class="answers"></div>
-        <div class="quiz-controls">
-          <button id="next-btn" class="btn">Próxima</button>
-          <button id="restart-btn" class="btn outline hidden">Reiniciar</button>
-        </div>
-        <div id="quiz-result" class="quiz-result hidden"></div>
-      </div>
-    </section>
+<footer class="rodape">
+  <p>©2025 | Nossa Escola | Todos os Direitos Reservados</p>
+</footer>
 
-    <footer class="escola">
-      <p>©2025 | Nossa Escola - Quiz</p>
-    </footer>
-  </div>
-
-  <div id="transition-overlay" class="transition-overlay hidden"></div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
