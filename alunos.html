@@ -3,35 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alunos | Nossa Escola</title>
+  <title>Portal Escola | Alunos</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="cabecalho">
   <img src="imagens/logo_nossa_escola.png" class="logo" alt="Logo da Escola">
-  <nav class="menu">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="alunos.html" class="ativo">Alunos</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="https://wa.me/5541999999999" target="_blank">Contato</a></li>
-    </ul>
+  <h1 class="titulo-site">Portal Escola</h1>
+  <button class="menu-btn" id="menu-btn">☰</button>
+  <nav class="menu" id="menu">
+    <a href="index.html">Início</a>
+    <a href="alunos.html" class="ativo">Alunos</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="https://wa.me/5541999999999" target="_blank">Contato</a>
   </nav>
 </header>
 
-<section class="alunos">
+<section class="alunos fade-in">
   <h2>Alunos em Destaque 2025</h2>
   <div class="galeria">
-    <div class="aluno"><img src="https://source.unsplash.com/120x120/?student" alt=""><p>Aluno 1</p></div>
-    <div class="aluno"><img src="https://source.unsplash.com/121x121/?student" alt=""><p>Aluno 2</p></div>
-    <div class="aluno"><img src="https://source.unsplash.com/122x122/?student" alt=""><p>Aluno 3</p></div>
-    <div class="aluno"><img src="https://source.unsplash.com/123x123/?student" alt=""><p>Aluno 4</p></div>
+    <div class="aluno">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Silva">
+      <h3>Maria Silva</h3>
+      <p>Estudante dedicada de Desenvolvimento Web, apaixonada por tecnologia e inovação.</p>
+    </div>
+    <div class="aluno">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Oliveira">
+      <h3>João Oliveira</h3>
+      <p>Foco em programação backend e segurança da informação. Gosta de desafios técnicos.</p>
+    </div>
+    <div class="aluno">
+      <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Ana Souza">
+      <h3>Ana Souza</h3>
+      <p>Especialista em design UX/UI, trabalha com criação de interfaces acessíveis e modernas.</p>
+    </div>
+    <div class="aluno">
+      <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Carlos Lima">
+      <h3>Carlos Lima</h3>
+      <p>Entusiasta de IA e aprendizado de máquina, sempre em busca de novas soluções criativas.</p>
+    </div>
   </div>
 </section>
 
 <footer class="rodape">
-  <p>©2025 | Nossa Escola | Todos os Direitos Reservados</p>
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
 </footer>
 
 <script src="script.js"></script>
