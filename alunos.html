@@ -1,72 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alunos | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="cabecalho">
-    <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
-      <h1 class="titulo-site">Portal Escola</h1>
+<header class="cabecalho">
+  <div class="cabecalho-esquerda">
+    <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+    <h1 class="titulo">Portal Escola</h1>
+  </div>
+  <div class="cabecalho-direita">
+    <div class="icones">
+      <a href="https://wa.me/5541999999999"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
     </div>
+    <button id="menu-btn">☰ MENU</button>
+  </div>
+</header>
 
-    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+<nav id="menu-lateral">
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="alunos.html">Alunos</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+<div id="overlay"></div>
 
-    <nav class="menu" role="navigation">
-      <a href="index.html" class="menu-link">Início</a>
-      <a href="alunos.html" class="menu-link ativo">Alunos</a>
-      <a href="quiz.html" class="menu-link">Quiz</a>
-      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
-    </nav>
-
-    <div class="redes-sociais">
-      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
+<section class="estudantes">
+  <h1>Alunos em Destaque 2025</h1>
+  <div class="lista-alunos">
+    <div class="aluno">
+      <img src="aluno1.jpg" alt="Aluno 1">
+      <h3>Maria Silva</h3>
+      <p>Aluna destaque em Matemática e Programação.</p>
     </div>
-  </header>
+    <div class="aluno">
+      <img src="aluno2.jpg" alt="Aluno 2">
+      <h3>João Souza</h3>
+      <p>Desenvolvedor júnior e representante da turma.</p>
+    </div>
+    <div class="aluno">
+      <img src="aluno3.jpg" alt="Aluno 3">
+      <h3>Fernanda Lima</h3>
+      <p>Responsável pelo clube de tecnologia da escola.</p>
+    </div>
+    <div class="aluno">
+      <img src="aluno4.jpg" alt="Aluno 4">
+      <h3>Carlos Pereira</h3>
+      <p>Destaque em robótica e automação.</p>
+    </div>
+  </div>
+</section>
 
-  <main class="conteudo">
-    <section class="intro fade-in">
-      <h2>Alunos em Destaque 2025</h2>
-      <p>Conheça alguns alunos que se destacaram em projetos e aprendizado.</p>
-    </section>
+<footer class="rodape">
+  <img src="logo_nossa_escola.png" class="logo_rodape" alt="Logo Portal Escola">
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
+</footer>
 
-    <section class="alunos-lista">
-      <article class="aluno-card fade-in">
-        <img src="estudante_menina.png" alt="Maria Silva" class="aluno-foto">
-        <h3>Maria Silva</h3>
-        <p>Aluna em Desenvolvimento de Sistemas. Projeto: app de organização de estudos.</p>
-      </article>
-
-      <article class="aluno-card fade-in">
-        <img src="estudante_menino.png" alt="João Pereira" class="aluno-foto">
-        <h3>João Pereira</h3>
-        <p>Destaque em automação e lógica. Projeto: robô seguidor de linha.</p>
-      </article>
-
-      <article class="aluno-card fade-in">
-        <img src="estudante_menino.png" alt="Carlos Almeida" class="aluno-foto">
-        <h3>Carlos Almeida</h3>
-        <p>Designer de interfaces — focado em acessibilidade e UX.</p>
-      </article>
-
-      <article class="aluno-card fade-in">
-        <img src="estudante_menina.png" alt="Ana Souza" class="aluno-foto">
-        <h3>Ana Souza</h3>
-        <p>Especialista em dados e visualização. Projeto: dashboards interativos.</p>
-      </article>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

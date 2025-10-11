@@ -1,66 +1,38 @@
-/* script.js — versão robusta e segura */
+const menuBtn = document.getElementById("menu-btn");
+const menuLateral = document.getElementById("menu-lateral");
+const overlay = document.getElementById("overlay");
 
-/* evitar que um erro pare todo o script: encapsula tudo */
-(function(){
-  document.addEventListener('DOMContentLoaded', () => {
-    try {
-      // Menu responsivo (trata múltiplos headers se existirem)
-      document.querySelectorAll('.cabecalho').forEach(header => {
-        const btn = header.querySelector('.menu-btn');
-        const menu = header.querySelector('.menu');
-        if (btn && menu) {
-          btn.addEventListener('click', () => {
-            menu.classList.toggle('ativo');
-            // animação visual curta
-            menu.classList.add('menu-open-glow');
-            setTimeout(()=> menu.classList.remove('menu-open-glow'), 380);
-          });
-        }
-      });
+menuBtn.addEventListener("click", () => {
+  const ativo = menuLateral.style.right === "0px";
+  menuLateral.style.right = ativo ? "-250px" : "0";
+  overlay.style.display = ativo ? "none" : "block";
+});
 
-      // Reveal on scroll (fade-in)
-      const revealOnScroll = () => {
-        document.querySelectorAll('.fade-in').forEach(el => {
-          const rect = el.getBoundingClientRect();
-          if (rect.top < window.innerHeight - 100) el.classList.add('visivel');
-        });
-      };
-      // rodar imediatamente e no scroll
-      revealOnScroll();
-      window.addEventListener('scroll', revealOnScroll);
+overlay.addEventListener("click", () => {
+  menuLateral.style.right = "-250px";
+  overlay.style.display = "none";
+});
 
-      // Quiz: resultado e reiniciar, com checagens
-      const btnResultado = document.getElementById('ver-resultado');
-      const btnReiniciar = document.getElementById('reiniciar-quiz');
-
-      if (btnResultado) {
-        btnResultado.addEventListener('click', () => {
-          const perguntas = document.querySelectorAll('.pergunta');
-          let acertos = 0;
-          perguntas.forEach(p => {
-            const correta = p.dataset.correta;
-            const selecionada = p.querySelector('input:checked');
-            if (selecionada && selecionada.value === correta) acertos++;
-          });
-          alert(`Você acertou ${acertos} de ${perguntas.length} perguntas.`);
-        });
-      }
-
-      if (btnReiniciar) {
-        btnReiniciar.addEventListener('click', () => {
-          document.querySelectorAll('.pergunta input[type="radio"]').forEach(i => i.checked = false);
-          const quiz = document.querySelector('.quiz');
-          if (quiz) quiz.scrollIntoView({behavior:'smooth', block:'start'});
-        });
-      }
-
-      // garante que a página não fique "invisível"
-      document.body.classList.add('loaded');
-
-    } catch (err) {
-      // Se falhar, mostra o erro no console e garante que a página fique visível
-      console.error('Erro no script.js:', err);
-      try { document.body.classList.add('loaded'); } catch(e) {}
-    }
+function iniciarQuiz() {
+  const perguntas = [
+    { pergunta: "Qual palavra-chave cria uma variável?", resposta: "let" },
+    { pergunta: "Qual símbolo é usado para comentários de linha única?", resposta: "//" },
+    { pergunta: "Como se escreve um alerta em JavaScript?", resposta: "alert()" }
+  ];
+  let html = "";
+  perguntas.forEach((p, i) => {
+    html += `<div><p>${i + 1}. ${p.pergunta}</p>
+    <input type="text" id="resp${i}"></div>`;
   });
-})();
+  html += `<button onclick="verificarQuiz()">Verificar</button>`;
+  document.getElementById("perguntas").innerHTML = html;
+}
+
+function verificarQuiz() {
+  const respostas = ["let", "//", "alert()"];
+  let acertos = 0;
+  respostas.forEach((r, i) => {
+    if (document.getElementById(`resp${i}`).value.trim() === r) acertos++;
+  });
+  alert(`Você acertou ${acertos} de ${respostas.length} perguntas!`);
+}

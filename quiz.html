@@ -1,74 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="cabecalho">
-    <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
-      <h1 class="titulo-site">Portal Escola</h1>
+<header class="cabecalho">
+  <div class="cabecalho-esquerda">
+    <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+    <h1 class="titulo">Portal Escola</h1>
+  </div>
+  <div class="cabecalho-direita">
+    <div class="icones">
+      <a href="https://wa.me/5541999999999"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
     </div>
+    <button id="menu-btn">☰ MENU</button>
+  </div>
+</header>
 
-    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+<nav id="menu-lateral">
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="alunos.html">Alunos</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+<div id="overlay"></div>
 
-    <nav class="menu" role="navigation">
-      <a href="index.html" class="menu-link">Início</a>
-      <a href="alunos.html" class="menu-link">Alunos</a>
-      <a href="quiz.html" class="menu-link ativo">Quiz</a>
-      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
-    </nav>
+<section class="quiz">
+  <h1>Quiz de JavaScript</h1>
+  <p>Teste seus conhecimentos!</p>
+  <button class="quiz-btn" onclick="iniciarQuiz()">Iniciar Quiz</button>
+  <div id="perguntas"></div>
+</section>
 
-    <div class="redes-sociais">
-      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-    </div>
-  </header>
+<footer class="rodape">
+  <img src="logo_nossa_escola.png" class="logo_rodape" alt="Logo Portal Escola">
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
+</footer>
 
-  <main class="conteudo">
-    <section class="intro fade-in">
-      <h2>Quiz de JavaScript</h2>
-      <p>Teste seus conhecimentos rápidos.</p>
-    </section>
-
-    <section class="quiz fade-in">
-      <div class="pergunta" data-correta="b">
-        <h3>1) Qual comando mostra saída no console?</h3>
-        <label><input type="radio" name="p1" value="a"> print()</label>
-        <label><input type="radio" name="p1" value="b"> console.log()</label>
-        <label><input type="radio" name="p1" value="c"> echo()</label>
-      </div>
-
-      <div class="pergunta" data-correta="a">
-        <h3>2) Como declarar uma variável moderna?</h3>
-        <label><input type="radio" name="p2" value="a"> let</label>
-        <label><input type="radio" name="p2" value="b"> var</label>
-        <label><input type="radio" name="p2" value="c"> const</label>
-      </div>
-
-      <div class="pergunta" data-correta="c">
-        <h3>3) Tipo de dado para texto?</h3>
-        <label><input type="radio" name="p3" value="a"> Number</label>
-        <label><input type="radio" name="p3" value="b"> Boolean</label>
-        <label><input type="radio" name="p3" value="c"> String</label>
-      </div>
-
-      <div class="quiz-actions">
-        <button id="ver-resultado" class="botao">Ver Resultado</button>
-        <button id="reiniciar-quiz" class="botao outline">Reiniciar</button>
-      </div>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

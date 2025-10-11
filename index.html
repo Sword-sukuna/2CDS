@@ -1,56 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header class="cabecalho">
-    <div class="logo-nome">
-      <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
-      <h1 class="titulo-site">Portal Escola</h1>
+<header class="cabecalho">
+  <div class="cabecalho-esquerda">
+    <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
+    <h1 class="titulo">Portal Escola</h1>
+  </div>
+  <div class="cabecalho-direita">
+    <div class="icones">
+      <a href="https://wa.me/5541999999999"><img src="whatsapp.png" alt="WhatsApp"></a>
+      <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
     </div>
+    <button id="menu-btn">☰ MENU</button>
+  </div>
+</header>
 
-    <button class="menu-btn" aria-label="Abrir menu">☰</button>
+<nav id="menu-lateral">
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li><a href="alunos.html">Alunos</a></li>
+    <li><a href="quiz.html">Quiz</a></li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+</nav>
+<div id="overlay"></div>
 
-    <nav class="menu" role="navigation">
-      <a href="index.html" class="menu-link ativo">Início</a>
-      <a href="alunos.html" class="menu-link">Alunos</a>
-      <a href="quiz.html" class="menu-link">Quiz</a>
-      <!-- Contato abre WhatsApp (temporário) -->
-      <a href="https://wa.me/5541998765432" class="menu-link" target="_blank" rel="noopener">Contato</a>
-    </nav>
+<section class="banner">
+  <img src="paragrafo_1_banner.jpg" alt="Banner da Escola">
+</section>
 
-    <div class="redes-sociais">
-      <a href="https://wa.me/5541998765432" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram"></a>
-    </div>
-  </header>
+<footer class="rodape">
+  <img src="logo_nossa_escola.png" class="logo_rodape" alt="Logo Portal Escola">
+  <h2>Mais informações entre em contato <a class="link" href="https://wa.me/5541999999999">41 9.9999-9999</a></h2>
+  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
+</footer>
 
-  <section class="banner fade-in">
-    <img src="paragrafo_1_banner.jpg" alt="Banner Portal Escola">
-    <div class="banner-text">
-      <h2>Bem-vindo ao Portal Escola</h2>
-      <p>Educação, tecnologia e projetos dos nossos alunos.</p>
-      <a href="alunos.html" class="botao">Ver Alunos</a>
-    </div>
-  </section>
-
-  <main class="conteudo">
-    <section class="sobre fade-in">
-      <h2>O que fazemos</h2>
-      <p>Projetos, cursos e atividades práticas para preparar profissionais de tecnologia.</p>
-    </section>
-  </main>
-
-  <footer class="rodape">
-    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
