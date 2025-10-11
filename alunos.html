@@ -1,68 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Alunos | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="cabecalho">
-  <div class="cabecalho-esquerda">
-    <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
-    <h1 class="titulo">Portal Escola</h1>
-  </div>
-  <div class="cabecalho-direita">
-    <div class="icones">
-      <a href="https://wa.me/5541999999999"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
+  <header class="cabecalho">
+    <div class="cab-top-left">
+      <div class="sociais-left">
+        <a href="https://wa.me/5541999999999" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp" class="icon-soc"></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook" class="icon-soc"></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram" class="icon-soc"></a>
+      </div>
+      <div class="marca">
+        <img src="logo_nossa_escola.png" alt="Logo" class="logo">
+        <span class="site-name">Portal Escola</span>
+      </div>
     </div>
-    <button id="menu-btn">☰ MENU</button>
-  </div>
-</header>
+    <button class="menu-toggle" id="open-menu">☰</button>
+  </header>
 
-<nav id="menu-lateral">
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="alunos.html">Alunos</a></li>
-    <li><a href="quiz.html">Quiz</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
-<div id="overlay"></div>
+  <div id="overlay" class="overlay hidden" aria-hidden="true"></div>
 
-<section class="estudantes">
-  <h1>Alunos em Destaque 2025</h1>
-  <div class="lista-alunos">
-    <div class="aluno">
-      <img src="aluno1.jpg" alt="Aluno 1">
-      <h3>Maria Silva</h3>
-      <p>Aluna destaque em Matemática e Programação.</p>
-    </div>
-    <div class="aluno">
-      <img src="aluno2.jpg" alt="Aluno 2">
-      <h3>João Souza</h3>
-      <p>Desenvolvedor júnior e representante da turma.</p>
-    </div>
-    <div class="aluno">
-      <img src="aluno3.jpg" alt="Aluno 3">
-      <h3>Fernanda Lima</h3>
-      <p>Responsável pelo clube de tecnologia da escola.</p>
-    </div>
-    <div class="aluno">
-      <img src="aluno4.jpg" alt="Aluno 4">
-      <h3>Carlos Pereira</h3>
-      <p>Destaque em robótica e automação.</p>
-    </div>
-  </div>
-</section>
+  <aside id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <nav class="side-nav" role="navigation">
+      <a href="index.html" class="side-link">Início</a>
+      <a href="alunos.html" class="side-link">Alunos</a>
+      <a href="quiz.html" class="side-link">Quiz</a>
+      <a href="https://wa.me/5541999999999" class="side-link" target="_blank" rel="noopener">Contato</a>
+    </nav>
+  </aside>
 
-<footer class="rodape">
-  <img src="logo_nossa_escola.png" class="logo_rodape" alt="Logo Portal Escola">
-  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
-</footer>
+  <main class="page">
+    <section class="conteudo fade-in">
+      <h2>Alunos em Destaque 2025</h2>
+      <p>Conheça os alunos que se destacaram por projetos, dedicação e excelência acadêmica.</p>
+    </section>
 
-<script src="script.js"></script>
+    <section class="alunos-grid">
+      <article class="aluno-card fade-in">
+        <img src="aluno1.jpg" alt="Aluno 1" class="aluno-foto">
+        <h3>Mariana Costa</h3>
+        <p>Mariana liderou o desenvolvimento de um aplicativo educativo para auxiliar estudos em matemática. Excelente em front-end e UX, coordenou a equipe de testes e documentação.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno2.jpg" alt="Aluno 2" class="aluno-foto">
+        <h3>Pedro Almeida</h3>
+        <p>Pedro projetou automações para tarefas administrativas usando scripts e integrações. Destaca-se por lógica apurada, otimização de processos e trabalho em equipe.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno3.jpg" alt="Aluno 3" class="aluno-foto">
+        <h3>Ana Beatriz</h3>
+        <p>Ana especializou-se em banco de dados e criação de dashboards interativos. Seu projeto trouxe visualização de métricas para projetos escolares em tempo real.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno4.jpg" alt="Aluno 4" class="aluno-foto">
+        <h3>Lucas Fernandes</h3>
+        <p>Lucas trabalhou com automação e robótica, construindo protótipos que integraram sensores e atuadores. Forte em eletrônica e lógica de controle.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno5.jpg" alt="Aluno 5" class="aluno-foto">
+        <h3>Camila Rodrigues</h3>
+        <p>Camila desenvolveu materiais didáticos digitais e soluções de acessibilidade para alunos com necessidades especiais. Excelente habilidade de comunicação e empatia.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno6.jpg" alt="Aluno 6" class="aluno-foto">
+        <h3>Rafael Souza</h3>
+        <p>Rafael é referência em segurança básica de sistemas e boas práticas de programação. Implementou políticas de proteção de dados nos projetos da turma.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno7.jpg" alt="Aluno 7" class="aluno-foto">
+        <h3>Beatriz Lima</h3>
+        <p>Beatriz se destacou em design de interfaces, prototipagem e testes com usuários. Criou guias de estilo e protótipos de alta fidelidade para um portal escolar.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno8.jpg" alt="Aluno 8" class="aluno-foto">
+        <h3>Gustavo Melo</h3>
+        <p>Gustavo ficou responsável por integração de APIs e backend leve, entregando serviços estáveis para os projetos da turma e documentação clara de endpoints.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno9.jpg" alt="Aluno 9" class="aluno-foto">
+        <h3>Carolina Martins</h3>
+        <p>Carolina liderou iniciativas de conteúdo educativo e gamificação, contribuindo para maior engajamento dos alunos nas atividades online.</p>
+      </article>
+
+      <article class="aluno-card fade-in">
+        <img src="aluno10.jpg" alt="Aluno 10" class="aluno-foto">
+        <h3>Eduardo Gomes</h3>
+        <p>Eduardo desenvolveu soluções de análise de dados para projetos experimentais. Forte em lógica, interpretação de dados e apresentação técnica.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

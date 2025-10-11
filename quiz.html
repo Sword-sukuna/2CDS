@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Quiz | Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="cabecalho">
-  <div class="cabecalho-esquerda">
-    <img src="logo_nossa_escola.png" alt="Logo Portal Escola" class="logo">
-    <h1 class="titulo">Portal Escola</h1>
-  </div>
-  <div class="cabecalho-direita">
-    <div class="icones">
-      <a href="https://wa.me/5541999999999"><img src="whatsapp.png" alt="WhatsApp"></a>
-      <a href="https://facebook.com"><img src="facebook.png" alt="Facebook"></a>
-      <a href="https://instagram.com"><img src="instagram.png" alt="Instagram"></a>
+  <header class="cabecalho">
+    <div class="cab-top-left">
+      <div class="sociais-left">
+        <a href="https://wa.me/5541999999999" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp" class="icon-soc"></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook" class="icon-soc"></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram" class="icon-soc"></a>
+      </div>
+      <div class="marca">
+        <img src="logo_nossa_escola.png" alt="Logo" class="logo">
+        <span class="site-name">Portal Escola</span>
+      </div>
     </div>
-    <button id="menu-btn">☰ MENU</button>
-  </div>
-</header>
+    <button class="menu-toggle" id="open-menu">☰</button>
+  </header>
 
-<nav id="menu-lateral">
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li><a href="alunos.html">Alunos</a></li>
-    <li><a href="quiz.html">Quiz</a></li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-</nav>
-<div id="overlay"></div>
+  <div id="overlay" class="overlay hidden" aria-hidden="true"></div>
 
-<section class="quiz">
-  <h1>Quiz de JavaScript</h1>
-  <p>Teste seus conhecimentos!</p>
-  <button class="quiz-btn" onclick="iniciarQuiz()">Iniciar Quiz</button>
-  <div id="perguntas"></div>
-</section>
+  <aside id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <nav class="side-nav" role="navigation">
+      <a href="index.html" class="side-link">Início</a>
+      <a href="alunos.html" class="side-link">Alunos</a>
+      <a href="quiz.html" class="side-link">Quiz</a>
+      <a href="https://wa.me/5541999999999" class="side-link" target="_blank" rel="noopener">Contato</a>
+    </nav>
+  </aside>
 
-<footer class="rodape">
-  <img src="logo_nossa_escola.png" class="logo_rodape" alt="Logo Portal Escola">
-  <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Todos os Direitos Reservados.</p>
-</footer>
+  <main class="page">
+    <section class="conteudo fade-in">
+      <h2>Quiz de JavaScript</h2>
+      <p>Responda e veja seu resultado instantaneamente.</p>
+    </section>
 
-<script src="script.js"></script>
+    <section class="quiz fade-in" id="quiz">
+      <div class="pergunta" data-correta="b">
+        <h3>1) Qual comando exibe texto no console?</h3>
+        <div class="quiz-row">
+          <button class="quiz-btn" data-value="a">print()</button>
+          <button class="quiz-btn" data-value="b">console.log()</button>
+          <button class="quiz-btn" data-value="c">echo()</button>
+        </div>
+      </div>
+
+      <div class="pergunta" data-correta="a">
+        <h3>2) Qual palavra-chave declara uma variável mutável?</h3>
+        <div class="quiz-row">
+          <button class="quiz-btn" data-value="a">let</button>
+          <button class="quiz-btn" data-value="b">const</button>
+          <button class="quiz-btn" data-value="c">static</button>
+        </div>
+      </div>
+
+      <div class="pergunta" data-correta="c">
+        <h3>3) Qual tipo de dado é usado para texto?</h3>
+        <div class="quiz-row">
+          <button class="quiz-btn" data-value="a">Number</button>
+          <button class="quiz-btn" data-value="b">Boolean</button>
+          <button class="quiz-btn" data-value="c">String</button>
+        </div>
+      </div>
+
+      <div class="quiz-actions">
+        <button id="ver-resultado" class="btn">Ver Resultado</button>
+        <button id="reiniciar-quiz" class="btn outline">Reiniciar</button>
+      </div>
+      <div id="resultado-box" class="resultado-box" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
