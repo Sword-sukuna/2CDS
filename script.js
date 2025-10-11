@@ -86,5 +86,11 @@
       console.error(e);
       document.body.style.opacity = '1';
     }
+
+    function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+
   });
 })();
