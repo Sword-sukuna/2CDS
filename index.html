@@ -1,58 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Portal Escola</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <div class="topo">
-      <h1 class="site-nome">Portal Escola</h1>
-      <button class="btn-categorias" onclick="toggleMenu()">☰ Categorias</button>
+  <header class="cabecalho">
+    <div class="cab-top-left">
+      <div class="sociais-left">
+        <a href="https://wa.me/5541999999999" target="_blank" rel="noopener"><img src="whatsapp.png" alt="WhatsApp" class="icon-soc"></a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener"><img src="facebook.png" alt="Facebook" class="icon-soc"></a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener"><img src="instagram.png" alt="Instagram" class="icon-soc"></a>
+      </div>
+      <div class="marca">
+        <img src="logo_nossa_escola.png" alt="Logo" class="logo">
+        <span class="site-name">Portal Escola</span>
+      </div>
     </div>
-    <nav id="menu">
-      <a href="#">Início</a>
-      <a href="#">Alunos</a>
-      <a href="#">Contato</a>
-      <a href="#">Quiz</a>
-    </nav>
+    <button class="menu-toggle" id="open-menu">☰</button>
   </header>
 
-  <section class="banner">
-    <img src="img/banner.png" alt="Banner Principal" class="banner-principal">
-  </section>
+  <div id="overlay" class="overlay hidden" aria-hidden="true"></div>
 
-  <section class="alunos">
-    <h2>Nossos Alunos</h2>
-    <div class="aluno-card">
-      <img src="img/aluno1.png" alt="Aluno 1" class="foto-aluno">
-      <h3>Maria Silva</h3>
-      <p>Estudante dedicada e apaixonada por ciência.</p>
-    </div>
-    <div class="aluno-card">
-      <img src="img/aluno2.png" alt="Aluno 2" class="foto-aluno">
-      <h3>João Souza</h3>
-      <p>Amante de tecnologia e inovação.</p>
-    </div>
-  </section>
+  <aside id="side-menu" class="side-menu" aria-hidden="true">
+    <button id="close-menu" class="close-menu">✕</button>
+    <nav class="side-nav" role="navigation">
+      <a href="index.html" class="side-link">Início</a>
+      <a href="alunos.html" class="side-link">Alunos</a>
+      <a href="quiz.html" class="side-link">Quiz</a>
+      <a href="https://wa.me/5541999999999" class="side-link" target="_blank" rel="noopener">Contato</a>
+    </nav>
+  </aside>
 
-  <section class="quiz">
-    <h2>Quiz</h2>
-    <button class="quiz-btn">Questão 1</button>
-    <button class="quiz-btn">Questão 2</button>
-    <button class="quiz-btn">Questão 3</button>
-  </section>
+  <main class="page">
+    <section class="banner">
+      <img src="paragrafo_1_banner.jpg" alt="Banner" class="banner-img">
+    </section>
 
-  <footer>
-    <p>© 2025 Portal Escola | Desenvolvido por Raul</p>
-    <div class="redes">
-      <a href="https://www.instagram.com" target="_blank" class="icon instagram"></a>
-      <a href="https://www.facebook.com" target="_blank" class="icon facebook"></a>
-      <a href="https://wa.me/55XXXXXXXXXX" target="_blank" class="icon whatsapp"></a>
-    </div>
+    <section class="conteudo fade-in">
+      <h2>Bem-vindo ao Portal Escola</h2>
+      <p>Projetos, cursos e atividades práticas para preparar profissionais de tecnologia e promover a aprendizagem.</p>
+      <a href="alunos.html" class="btn">Ver Alunos em Destaque</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>©2025 | Portal Escola | Raul Vinicius do Carmo da Rosa | Curso ADS</p>
   </footer>
 
   <script src="script.js"></script>
