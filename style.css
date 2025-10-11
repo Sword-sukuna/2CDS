@@ -1,9 +1,19 @@
-/* reset */
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
-body{background:#f4f6fb;color:#222;min-height:100vh;display:flex;flex-direction:column;opacity:0;transition:opacity .9s ease}
+/* style.css — versão patched (não deixa a página em branco) */
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif}
+
+/* Tornar a página visível por padrão para evitar "tela branca" enquanto o JS roda */
+body{
+  background:#f4f6fb;
+  color:#222;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  opacity:1;               /* <- era 0 antes; agora 1 para evitar página em branco */
+  transition:opacity .9s ease;
+}
 
 /* header */
-.cabecalho{background:#1f4e8c;color:#fff;padding:12px 20px;position:relative;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+header.cabecalho{background:#1f4e8c;color:#fff;padding:12px 20px;position:relative;z-index:50;box-shadow:0 2px 6px rgba(0,0,0,.12)}
 .logo-nome{display:flex;align-items:center;gap:12px}
 .logo{width:56px;height:56px;object-fit:contain;border-radius:6px}
 .titulo-site{font-size:1.25rem}
@@ -50,16 +60,13 @@ body{background:#f4f6fb;color:#222;min-height:100vh;display:flex;flex-direction:
 /* footer */
 .rodape{background:#1f4e8c;color:#fff;text-align:center;padding:14px;margin-top:28px}
 
-/* fade-in / animations */
+/* fade-in */
 .fade-in{opacity:0;transform:translateY(24px);transition:all .7s ease}
 .fade-in.visivel{opacity:1;transform:translateY(0)}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 
 /* responsive */
-@media(max-width:900px){
-  .banner img{height:300px}
-  .banner-text{left:16px;right:16px;top:48%}
-}
+@media(max-width:900px){.banner img{height:300px}.banner-text{left:16px;right:16px;top:48%}}
 @media(max-width:768px){
   .menu{display:none;position:absolute;top:68px;left:0;width:100%;flex-direction:column;background:#1f4e8c;padding:12px 0}
   .menu.ativo{display:flex;animation:fadeIn .28s ease}
