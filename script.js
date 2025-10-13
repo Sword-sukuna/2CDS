@@ -34,14 +34,24 @@
 
       var quizButtons = document.querySelectorAll('.quiz-btn');
       quizButtons.forEach(function(btn){
-        btn.addEvenntListener('click', function(){
-          Var group = btn.closest('.pergunta');
-          if(!group) return;
-          group.querySelectorAll('quiz-bnt').forEach(function(b){
-            b.classList.remove('selecionado');
-            btn.classList.add('selecionado');
-          });
-        });
+  btn.addEventListener('click', function(){
+    var group = btn.closest('.pergunta');
+    if(!group) return;
+    var buttons = group.querySelectorAll('.quiz-btn');
+    buttons.forEach(function(b){ b.disabled = true; });
+    var selected = btn.getAttribute('data-value');
+    var correct = group.getAttribute('data-correta');
+    if(selected === correct){
+      btn.classList.add('correct');
+    } else {
+      btn.classList.add('wrong');
+      buttons.forEach(function(b){
+        if(b.getAttribute('data-value') === correct) b.classList.add('correct');
+      });
+    }
+  });
+});
+
 
       var verBtn = document.getElementById('ver-resultado');
       var reiniciar = document.getElementById('reiniciar-quiz');
