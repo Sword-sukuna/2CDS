@@ -17,9 +17,7 @@
         document.documentElement.style.overflow = '';
       }
 
-      openBtns.forEach(function(b){
-        b.addEventListener('click', openMenu);
-      });
+      openBtns.forEach(function(b){ b.addEventListener('click', openMenu); });
       if(closeBtn) closeBtn.addEventListener('click', closeMenu);
       if(overlay) overlay.addEventListener('click', closeMenu);
 
@@ -34,24 +32,14 @@
 
       var quizButtons = document.querySelectorAll('.quiz-btn');
       quizButtons.forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var group = btn.closest('.pergunta');
-    if(!group) return;
-    var buttons = group.querySelectorAll('.quiz-btn');
-    buttons.forEach(function(b){ b.disabled = true; });
-    var selected = btn.getAttribute('data-value');
-    var correct = group.getAttribute('data-correta');
-    if(selected === correct){
-      btn.classList.add('correct');
-    } else {
-      btn.classList.add('wrong');
-      buttons.forEach(function(b){
-        if(b.getAttribute('data-value') === correct) b.classList.add('correct');
+        btn.addEventListener('click', function(){
+          var group = btn.closest('.pergunta');
+          if(!group) return;
+          var buttons = group.querySelectorAll('.quiz-btn');
+          buttons.forEach(function(b){ b.classList.remove('selected'); });
+          btn.classList.add('selected');
+        });
       });
-    }
-  });
-});
-
 
       var verBtn = document.getElementById('ver-resultado');
       var reiniciar = document.getElementById('reiniciar-quiz');
@@ -63,8 +51,17 @@
           var acertos = 0;
           perguntas.forEach(function(p){
             var correta = p.getAttribute('data-correta');
-            var chosen = Array.prototype.slice.call(p.querySelectorAll('.quiz-btn')).find(function(b){ return b.classList.contains('correct'); });
-            if(chosen && chosen.getAttribute('data-value') === correta) acertos++;
+            var buttons = p.querySelectorAll('.quiz-btn');
+            var selected = p.querySelector('.quiz-btn.selected');
+            buttons.forEach(function(b){
+              b.disabled = true;
+              var val = b.getAttribute('data-value');
+              if(val === correta) b.classList.add('correct');
+              if(selected && val === selected.getAttribute('data-value') && val !== correta){
+                b.classList.add('wrong');
+              }
+            });
+            if(selected && selected.getAttribute('data-value') === correta) acertos++;
           });
           resultadoBox.textContent = 'Você acertou ' + acertos + ' de ' + perguntas.length + ' perguntas.';
         });
@@ -73,7 +70,7 @@
       if(reiniciar){
         reiniciar.addEventListener('click', function(){
           document.querySelectorAll('.pergunta .quiz-btn').forEach(function(b){
-            b.classList.remove('correct','wrong');
+            b.classList.remove('correct','wrong','selected');
             b.disabled = false;
           });
           if(resultadoBox) resultadoBox.textContent = '';
