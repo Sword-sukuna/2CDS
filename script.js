@@ -6,6 +6,8 @@
       var overlay = document.getElementById('overlay');
       var closeBtn = document.getElementById('close-menu');
 
+/* Funções do menu */
+
       function openMenu(){
         if(side){ side.setAttribute('aria-hidden','false'); side.style.left = '0'; }
         if(overlay){ overlay.classList.remove('hidden'); overlay.setAttribute('aria-hidden','false'); }
@@ -29,6 +31,8 @@
       }
       revealOnScroll();
       window.addEventListener('scroll', revealOnScroll, {passive:true});
+
+/* Funções dos botões dos quizes */
 
       var quizButtons = document.querySelectorAll('.quiz-btn');
       quizButtons.forEach(function(btn){
@@ -63,7 +67,7 @@
             });
             if(selected && selected.getAttribute('data-value') === correta) acertos++;
           });
-          resultadoBox.textContent = 'Você acertou ' + acertos + ' de ' + perguntas.length + ' perguntas.';
+          resultadoBox.textContent = 'Você acertou ' + acertos + ' de ' + perguntas.length + ' perguntas.';   /* Função de acerto de perguntas */
         });
       }
 

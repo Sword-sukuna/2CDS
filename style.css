@@ -12,6 +12,8 @@
 html,body{height:100%}
 body{font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:#111;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
 
+/* Estilo geral */
+
 .cabecalho{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;background:var(--brand);color:#fff;gap:12px;position:relative;z-index:80;box-shadow:0 4px 20px rgba(2,6,23,0.08)}
 .cab-top-left{display:flex;align-items:center;gap:12px}
 .sociais-left{display:flex;align-items:center;gap:8px;margin-right:6px}
@@ -52,12 +54,16 @@ body{font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial;backg
 .btn{display:inline-block;padding:10px 18px;border-radius:10px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;border:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s}
 .btn:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(31,78,140,0.16)}
 
+/* Alunos */
+
 .alunos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;padding:22px;max-width:1100px;margin:0 auto}
 .aluno-card{background:var(--card);border-radius:var(--radius);padding:18px;text-align:center;box-shadow:0 10px 26px rgba(12,24,48,0.06);transition:transform .28s ease,box-shadow .28s}
 .aluno-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(12,24,48,0.12)}
 .aluno-foto{width:110px;height:110px;border-radius:999px;object-fit:cover;margin-bottom:10px}
 .aluno-card h3{color:var(--brand);margin-bottom:8px}
 .aluno-card p{color:var(--muted);font-size:0.95rem;line-height:1.45}
+
+/* Quizes */
 
 .quiz{max-width:900px;margin:18px auto;padding:22px;border-radius:12px;background:var(--card);box-shadow:0 18px 40px rgba(12,24,48,0.06)}
 .pergunta{margin-bottom:18px}
@@ -98,10 +104,14 @@ body{font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto,Arial;backg
 .quiz-actions{display:flex;gap:12px;justify-content:center;margin-top:12px}
 .btn.outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
 
+/* Caixa de resultado */
+
 .resultado-box{margin-top:14px;text-align:center;font-weight:700;color:var(--brand);min-height:24px}
 
 .fade-in{opacity:0;transform:translateY(18px);transition:all .7s cubic-bezier(.2,.9,.3,1)}
 .fade-in.visivel{opacity:1;transform:translateY(0)}
+
+/* Roda pe */
 
 .rodape{background:linear-gradient(90deg,var(--brand),var(--brand-dark));color:#fff;text-align:center;padding:14px;margin-top:20px}
 
